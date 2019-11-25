@@ -132,9 +132,9 @@ class Car{
         this.speed =speed;
     }
     
-    accelerate():void{
+    accelerate():string{
         // console.log("The car "+this.name+" is running at"+this.speed+"kmps");
-        console.log(`The car ${this.name} is running at ${this.speed} kmph!`); //
+        return `The car ${this.name} is running at ${this.speed} kmph!`; //
     }
 }
 
@@ -146,3 +146,20 @@ Second Line
 Third Line
 Last Line !` //here \n or \r is included
 
+class JamesBondCar extends Car{
+    canFly: boolean;
+    canSubmerge: boolean;
+
+    constructor(n:string,s:number, fly:boolean,sub:boolean){
+        super(n,s); //compulsory to call super for invoking base class constructor
+        this.canFly = fly;
+        this.canSubmerge = sub;
+    }
+
+    accelerate():string{
+        return super.accelerate() + "additional text";
+    }
+}
+
+var jbc: JamesBondCar = new JamesBondCar("aston martin",500,true,true);
+jbc.accelerate();
