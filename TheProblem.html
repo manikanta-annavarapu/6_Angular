@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function Emp(){
+            this.salary = 100000;
+            setTimeout(function(){
+                console.log(this.salary); // as the function gets out from stack 'this' will be as window object
+            }, 3000);
+        }
+
+        //solution using es5 closure 
+        function Emp2(){
+            this.salary = 100;
+            var self = this;
+            setTimeout(function () { console.log(self.salary)},3000);
+        }
+
+        //arrow functions
+        function Emp2(){
+            this.salary = 100;
+            var self = this;
+            setTimeout(() => { console.log(this.salary)},3000);
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
