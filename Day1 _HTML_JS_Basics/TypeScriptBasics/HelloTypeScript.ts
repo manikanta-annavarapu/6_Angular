@@ -1,7 +1,7 @@
 // var x = 10; //type inference
 var x: number = 10; // type annotation
 // x = "Hi"; //throws and error
-console.log(x);
+// console.log(x);
 
 var s: string;
 var o: object;
@@ -29,8 +29,8 @@ function printBooks(author?: string, title?: string): void{
     console.log(author, title)
 }
 
-printBooks();
-printBooks("Oreo","Biscuits");
+// printBooks();
+// printBooks("Oreo","Biscuits");
 
 //default parameters
 function printBooksDefault(author: string = "Unknow", title: string  = "Unknow"): void{
@@ -41,5 +41,18 @@ function printBooksDefault(author: string = "Unknow", title: string  = "Unknow")
 function printBooksRest(author: string, ...titles: string[]):void{
     console.log(author,titles)
 }
-printBooksRest("A","B");
-printBooksRest("A","B","C");
+// printBooksRest("A","B");
+// printBooksRest("A","B","C");
+
+
+//different ways of writing a funciton
+var Square = function(x){
+    return x*x;
+}
+// arrow function
+var Square1 = (x) =>{
+    return x*x;
+}
+
+// if only one parameter is there
+var Square2 = x => x*x;
