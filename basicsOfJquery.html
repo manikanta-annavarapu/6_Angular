@@ -3,19 +3,21 @@
 <head>
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    
-    
+     <!--another solution is  -->
+    <script>
+        $(document).ready(function (){
+            $("#btn").click(function(){
+                console.log("hi");
+                $("#heading").html($("txtMessage").val());
+            });
+        });
+    </script>
 </head>
 <body>
     Enter greeting message here: <input type="text" id="txtMessage"/>
     <input type="button" value="Greet" id="btm"/>
     <h1 id="heading"></h1>
-    <!-- it works here because we are executing js after the dom is ready -->
-    <script>
-            $("#btn").click(function(){
-                console.log("hi");
-                $("#heading").html($("txtMessage").val());
-            });
-    </script>
+   
+    
 </body>
 </html>
