@@ -163,3 +163,38 @@ class JamesBondCar extends Car{
 
 var jbc: JamesBondCar = new JamesBondCar("aston martin",500,true,true);
 jbc.accelerate();
+
+
+//practicing inheritance
+class Person{
+    name: string;
+    gender: string;
+    age: number;
+
+    constructor(n:string,g:string,a:number) {
+        this.name = n;
+        this.gender = g;
+        this.age = a;
+    }
+
+
+}
+
+class Student extends Person{
+    marks: number;
+    grade: string;
+    constructor(n:string,g:string,a:number,m:number,gr:string){
+        super(n,g,a);
+        this.marks = m;
+        this.grade = gr;
+    }
+}
+
+//class implements interface
+class Company implements ICompany{
+    title:string;
+    city:string;
+    getDetails(){
+        console.log(this.title,this.city);
+    }
+}
