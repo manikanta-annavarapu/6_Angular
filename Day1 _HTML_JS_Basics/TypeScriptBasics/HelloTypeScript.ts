@@ -120,3 +120,29 @@ interface ICompany{
 //here company1 will only accept the properties available in ICompany, if we try to add any other properties
 //it will throw an error
 var company1: ICompany = {title:"JCI",city:"pune",getDetails: () =>{console.log(this.title+" "+this.city)}}
+
+
+//class
+//private , public and protected access specifiers are available in typescript
+class Car{
+    name:string;
+    speed: number;
+    constructor(name:string="i20", speed:number=100){
+        this.name =name;
+        this.speed =speed;
+    }
+    
+    accelerate():void{
+        // console.log("The car "+this.name+" is running at"+this.speed+"kmps");
+        console.log(`The car ${this.name} is running at ${this.speed} kmph!`); //
+    }
+}
+
+var objCar: Car = new Car();
+objCar.accelerate();
+
+var multiLineStr = `First Line
+Second Line 
+Third Line
+Last Line !` //here \n or \r is included
+
