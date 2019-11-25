@@ -106,3 +106,17 @@ city = person.city;
 var obj = {oreo:"biscuit",badam:"nut"}
 var oreo, badam;
 ({oreo,badam} = obj) //in objects variable names and object property names should be same
+
+var company = {title:"JCI", city: "pune", xyz:123}
+// while creating an object there is a chance where other properties may embed which are invalid
+//to overcome this we will make use of interface
+// interface in typescript
+
+interface ICompany{
+    title: string;
+    city?:string;
+    getDetails():void;
+}
+//here company1 will only accept the properties available in ICompany, if we try to add any other properties
+//it will throw an error
+var company1: ICompany = {title:"JCI",city:"pune",getDetails: () =>{console.log(this.title+" "+this.city)}}
