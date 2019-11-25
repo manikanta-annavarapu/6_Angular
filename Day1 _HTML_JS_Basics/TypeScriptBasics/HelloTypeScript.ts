@@ -20,3 +20,14 @@ function add(x:number,y:number){
 add(10,20);
 
 var result: number = add(10,20);
+
+//Parameters - optional, default, rest(remaining)
+//optional parameters should be at the last
+function printBooks(author?: string, title?: string): void{
+    author = author|| "Unknow";
+    title = title || "Unknow"; //older way of doing it
+    console.log(author, title)
+}
+
+printBooks();
+printBooks("Oreo","Biscuits");
