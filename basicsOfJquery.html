@@ -8,16 +8,15 @@
         $(document).ready(function (){
             $("#btn").click(function(){
                 console.log("hi");
-                $("#heading").html($("txtMessage").val());
+                $("#heading").html($("#txtMessage").val());
             });
         });
     </script>
 </head>
 <body>
     Enter greeting message here: <input type="text" id="txtMessage"/>
-    <input type="button" value="Greet" id="btm"/>
+    <input type="button" value="Greet" id="btn"/>
     <h1 id="heading"></h1>
-   
-    
+
 </body>
 </html>
