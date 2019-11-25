@@ -56,3 +56,24 @@ var Square1 = (x) =>{
 
 // if only one parameter is there
 var Square2 = x => x*x;
+
+//Arrays
+var carsAll = ["BMW","AUDI", "FERRARI",10];
+var cars: string[] =  ["BMW","AUDI", "FERRARI"];
+var carsMore: Array<string> = new Array<string> ("BMW","AUDI", "FERRARI");
+
+for(let c in cars){ // c will give index
+    console.log(c)
+}
+
+for(let c of cars){ // c will give item
+    console.log(c);
+} 
+
+// for with normal function
+cars.forEach(function(car:string,index:number){
+    console.log(car);
+});
+
+// for with arrow function
+cars.forEach((car:string,index:number) =>console.log(car));
