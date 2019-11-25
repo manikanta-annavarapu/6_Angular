@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function GreetingHandler(){
+            var msgtxt = document.getElementById("txtMessage");
+            if(msgtxt.value == ""){
+                alert("Text can not be empty");
+            }
+            var h = document.getElementById("heading");
+            h.innerHTML = msgtxt.value;
+        }
+    </script>
+</head>
+<body>
+    
+    Enter greeting message here: <input type="text" id="txtMessage"/>
+    <input type="button" value="Greet" onclick="GreetingHandler()"/>
+    <h1 id="heading"></h1>
+</body>
+</html>
