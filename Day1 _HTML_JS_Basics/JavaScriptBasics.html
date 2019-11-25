@@ -31,6 +31,21 @@
         //literal syntax (we cannot use it as a template)
         var emp = {name:"Amit", salary:65323}
         console.log(emp.salary);
+
+        //loosely typed language
+        var something = 100;
+        something = "hello";
+
+        //closure variables
+        function Outer(){
+            var innerVar = 20000;
+            return function(){
+                console.log("from inner variable = "+innerVar);
+                
+            }
+        }
+        var innerFunc = Outer();
+        innerFunc();
     </script>
 </head>
 <body>
