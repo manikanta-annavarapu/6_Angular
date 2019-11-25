@@ -46,6 +46,12 @@
         }
         var innerFunc = Outer();
         innerFunc();
+
+        //ES 6 - ES 2015 - ECMA Script 6
+        if(true){
+            let blockedScoped = 10;
+            let blockedScoped = 20; //throws an error as variable blockedScoped is already declared
+        }
     </script>
 </head>
 <body>
