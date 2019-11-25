@@ -10,6 +10,27 @@
         }
         localVariable();
         console.log(x);
+
+        //function as an expression
+        var square = function(x){
+            return x*x;
+        }
+
+        //constructor
+        function Emp(){
+            this.salary = 60000;
+            this.getSalary = function () {
+                console.log(this.salary);
+            }
+            var dam = 1000;
+        }
+        var e = new Emp();
+        // console.log(e.salary);
+        e.getSalary();
+
+        //literal syntax (we cannot use it as a template)
+        var emp = {name:"Amit", salary:65323}
+        console.log(emp.salary);
     </script>
 </head>
 <body>
