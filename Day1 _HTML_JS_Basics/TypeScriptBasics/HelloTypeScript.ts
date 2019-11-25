@@ -25,9 +25,21 @@ var result: number = add(10,20);
 //optional parameters should be at the last
 function printBooks(author?: string, title?: string): void{
     author = author|| "Unknow";
-    title = title || "Unknow"; //older way of doing it
+    title = title || "Unknow"; //older way of doing it so we can make use of default parameters
     console.log(author, title)
 }
 
 printBooks();
 printBooks("Oreo","Biscuits");
+
+//default parameters
+function printBooksDefault(author: string = "Unknow", title: string  = "Unknow"): void{
+    console.log(author, title)
+}
+
+//rest(remaining) three dots represents variable number of parameters
+function printBooksRest(author: string, ...titles: string[]):void{
+    console.log(author,titles)
+}
+printBooksRest("A","B");
+printBooksRest("A","B","C");
