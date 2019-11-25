@@ -89,3 +89,20 @@ var carsAll2 = [cars1, carsMore1] // is actually array of arrays
 var person  = {name:"Virat", city:"delhi"};
 var player = {...person, runs:5000}
 
+
+//Destructing (array , objects)
+//Destructing (array )
+var firstCar, secondCar, thirdCar;
+[firstCar,secondCar] = cars1; //item at index 0 will mapped to firstCar and at index 1 mapped to secondCar
+[firstCar,,secondCar, thirdCar = "Jeep"] = cars1 //different way
+
+
+//Destructing (objects)
+var pname, city;
+//traditional way
+pname = person.name;
+city = person.city;
+//destructing way
+var obj = {oreo:"biscuit",badam:"nut"}
+var oreo, badam;
+({oreo,badam} = obj) //in objects variable names and object property names should be same
