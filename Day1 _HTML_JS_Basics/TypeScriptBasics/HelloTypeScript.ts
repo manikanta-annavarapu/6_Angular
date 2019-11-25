@@ -77,3 +77,15 @@ cars.forEach(function(car:string,index:number){
 
 // for with arrow function
 cars.forEach((car:string,index:number) =>console.log(car));
+
+//Spread (Arrays, objects)
+
+var cars1: string[] =  ["BMW","AUDI", "FERRARI"];
+var carsMore1: Array<string> = new Array<string> ("TATA","MAHINDRA");
+var carsAll1:string[] = [...cars1,...carsMore1]; //deep copies the values of cars1 and carsMore1 into carsAll1 and carsAll1 will be 1d array
+var carsAll2 = [cars1, carsMore1] // is actually array of arrays
+
+//Spread with objects
+var person  = {name:"Virat", city:"delhi"};
+var player = {...person, runs:5000}
+
