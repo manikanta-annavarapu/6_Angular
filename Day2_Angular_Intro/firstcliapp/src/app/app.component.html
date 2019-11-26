@@ -1,9 +1,13 @@
 
+<!-- {{}} when we use them variable inside it is converted into string(toString() method is called) so objects pass will show some invalid data.
+
+That is why we property binding 
+[coursedetails]="course1" -->
 
 <!-- <h1> Hello Angular</h1> -->
-<course courseName="{{course1}}" price=500></course>
-<course courseName="{{course2}}" price=200></course>
-<course courseName="{{course3}}" price=250 ></course>
+<course [coursedetails]="course1" ></course>
+<course [coursedetails]="course2"></course>
+<course [coursedetails]="course3"  ></course>
 
 
 
