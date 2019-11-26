@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'firstcliapp';
+  course1:string="c#";
+  course2:string="#c++";
+  course3:string="c";
 }
