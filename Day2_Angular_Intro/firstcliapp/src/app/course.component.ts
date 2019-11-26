@@ -6,5 +6,5 @@ import {Component, Input} from '@angular/core';
 })
 
 export class CourseComponent{
-   @Input() name: string ="React"
+   @Input('courseName') name: string ="React" //here coursename is alias name from 'name' variable
 }
