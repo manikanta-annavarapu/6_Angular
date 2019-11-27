@@ -6,8 +6,8 @@ value="change heading!"
 class="btn btn-default"
 (click)="ChangeHeading()"
 /> -->
-<input type="text" [value]="heading" (input)="ChangeHeadingOnInput($event)">
-
+<!-- <input type="text" [value]="heading" (input)="ChangeHeadingOnInput($event)"> -->
+Enter Heading Text : <input type="text" [(ngModel)]="heading"/>
 
 <h3>List Of Items</h3>
 <div class="row">
