@@ -1,9 +1,10 @@
 
 
-<div  [ngClass]="{'ProductStyle':true,'OutofStock': product.quantity == 0,'Highlighted':isHighlighted}">
+<div  [ngClass]="{'ProductStyle':true,'Highlighted':isHighlighted}">
     Add to Cart:<input type="checkbox" [(ngModel)]="isHighlighted"/>
     <div >
-        <img [src]="product.imageUrl" height="200px" width="200px" />
+        <img [ngStyle] = "product.quantity==0? {opacity:0.2} :'' " [src]="product.imageUrl" height="200px" width="200px" />
+
     </div>
     <div >
         <h2>{{product.title}}</h2>
