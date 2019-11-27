@@ -1,11 +1,12 @@
 <div class="jumbotron ">
     <h1> {{heading}} </h1>
 </div>
-<input type="button"
+<!-- <input type="button"
 value="change heading!"
 class="btn btn-default"
 (click)="ChangeHeading()"
-/>
+/> -->
+<input type="text" [value]="heading" (input)="ChangeHeadingOnInput($event)">
 
 
 <h3>List Of Items</h3>

@@ -15,6 +15,10 @@ export class ShoppingCartComponent{
 
         ChangeHeading(){
             this.heading="Flipkart";
-            
+        }
+
+        ChangeHeadingOnInput(e){
+            this.heading = e.target.value;
+            // console.log(e.target.value);
         }
 }
