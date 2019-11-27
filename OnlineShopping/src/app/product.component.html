@@ -15,7 +15,7 @@
         <ng-template #elseTemplate> <!--ELSE SHOULD BE A NG-TEMPLATE-->
             <b>This is free</b>
         </ng-template>
-        <p >Quantity:{{product.quantity|qty}}</p>
+        <p >Quantity:{{product.quantity|qty:'nos'}}</p>
         <p>Rating: {{product.rating|number:'1.1-2'}}, Likes: {{product.likes}}</p>
         <!-- <p>RAW Data: {{product | json}}</p> -->
         <button class="btn btn-primary">
