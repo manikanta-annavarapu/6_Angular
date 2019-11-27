@@ -1,6 +1,7 @@
 
 
-<div >
+<div  [ngClass]="{'Highlighted':isHighlighted}">
+    Add to Cart:<input type="checkbox" [(ngModel)]="isHighlighted"/>
     <div >
         <img [src]="product.imageUrl" height="200px" width="200px" />
     </div>
