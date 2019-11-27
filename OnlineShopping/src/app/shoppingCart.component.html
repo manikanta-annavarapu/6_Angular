@@ -7,7 +7,15 @@ class="btn btn-default"
 (click)="ChangeHeading()"
 /> -->
 <!-- <input type="text" [value]="heading" (input)="ChangeHeadingOnInput($event)"> -->
-Enter Heading Text : <input type="text" [(ngModel)]="heading"/>
+<!-- Enter Heading Text : <input type="text" [(ngModel)]="heading"/> -->
+Enter Company:<input type="text" [(ngModel)]="companyName" />
+<ul [ngSwitch]="companyName">
+    <li *ngSwitchCase=" 'Accenture' ">Accenture</li>
+    <li *ngSwitchCase=" 'IBM' ">IBM</li>
+    <li *ngSwitchCase=" 'JCI' ">JCI</li>
+    <li *ngSwitchCase=" 'Infosys' ">Infosys</li>
+    <li *ngSwitchDefault>No company match</li>
+</ul>
 
 <h3>List Of Items</h3>
 <div class="row">
