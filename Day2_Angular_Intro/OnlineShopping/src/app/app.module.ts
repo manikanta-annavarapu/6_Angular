@@ -2,14 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {CourseComponent} from './course.component';
-import { TempComponent } from './temp/temp.component';
+import {ShoppingCartComponent} from './shoppingCart.component';
+import {ProductComponent} from './product.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CourseComponent,
-    TempComponent
+    AppComponent, ShoppingCartComponent, ProductComponent
   ],
   imports: [
     BrowserModule
