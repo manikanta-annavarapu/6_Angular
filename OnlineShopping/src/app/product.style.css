@@ -9,3 +9,7 @@
 .Highlighted{
     background-color: lightskyblue;
 }
+.OutofStock{
+    /* background-color: yellowgreen; */
+    opacity: 0.5;
+}

@@ -6,6 +6,9 @@ import { Product } from './product.model';
  styleUrls:['./product.style.css']
 })
 export class ProductComponent{
-    @Input() product:Product;
+    @Input() product:Product ;
     isHighlighted:boolean=false;
+
+   
+  
 }

@@ -1,13 +1,14 @@
 
 
-<div  [ngClass]="{'ProductStyle':true,'Highlighted':isHighlighted}">
+<div  [ngClass]="{'ProductStyle':true,'OutofStock': product.quantity == 0,'Highlighted':isHighlighted}">
     Add to Cart:<input type="checkbox" [(ngModel)]="isHighlighted"/>
     <div >
         <img [src]="product.imageUrl" height="200px" width="200px" />
     </div>
     <div >
         <h2>{{product.title}}</h2>
-        <p>Price: {{product.price}}, Quantity:{{product.quantity}}</p>
+        <p>Price: {{product.price}} </p>
+        <p >Quantity:{{product.quantity}}</p>
         <p>Rating: {{product.rating}}, Likes: {{product.likes}}</p>
         <button class="btn btn-primary">
             <span class="glyphicon glyphicon-thumbs-up"></span>
