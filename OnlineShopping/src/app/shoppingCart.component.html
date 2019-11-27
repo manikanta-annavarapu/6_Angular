@@ -8,18 +8,27 @@ class="btn btn-default"
 /> -->
 <!-- <input type="text" [value]="heading" (input)="ChangeHeadingOnInput($event)"> -->
 <!-- Enter Heading Text : <input type="text" [(ngModel)]="heading"/> -->
-Enter Company:<input type="text" [(ngModel)]="companyName" />
+<!-- Enter Company:<input type="text" [(ngModel)]="companyName" />
 <ul [ngSwitch]="companyName">
     <li *ngSwitchCase=" 'Accenture' ">Accenture</li>
     <li *ngSwitchCase=" 'IBM' ">IBM</li>
     <li *ngSwitchCase=" 'JCI' ">JCI</li>
     <li *ngSwitchCase=" 'Infosys' ">Infosys</li>
     <li *ngSwitchDefault>No company match</li>
-</ul>
+</ul> -->
+Search : <input type="text" [(ngModel)]="searchString"/>
+
 
 <h3>List Of Items</h3>
-<div class="row">
-    <div *ngFor = "let p of products" class="col-md-4">
-        <product [product]="p"></product>
+<div class="row" [ngSwitch] = "searchString">
+    <div *ngFor = "let p of products"  >
+        <div  *ngSwitchCase="p.title" class="col-md-4">
+                <product [product]="p" ></product>
+        </div>
+    </div>
+    <div *ngSwitchDefault>
+            <div *ngFor = "let p of products"  class="col-md-4">
+                    <product [product]="p" ></product>
+            </div>
     </div>
 </div>
