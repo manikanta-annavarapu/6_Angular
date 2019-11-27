@@ -7,16 +7,17 @@
 
     </div>
     <div >
-        <h2>{{product.title}}</h2>
+        <h2>{{product.title | uppercase}}</h2>
        Is Free: <input type="checkbox" [(ngModel)]="isFree"/><br/>
        <p *ngIf="!isFree;else elseTemplate ">
-            <b>Price: {{product.price}} </b>
+            <b>Price: {{product.price|currency:'INR'}} </b>
        </p>
         <ng-template #elseTemplate> <!--ELSE SHOULD BE A NG-TEMPLATE-->
             <b>This is free</b>
         </ng-template>
         <p >Quantity:{{product.quantity}}</p>
-        <p>Rating: {{product.rating}}, Likes: {{product.likes}}</p>
+        <p>Rating: {{product.rating|number:'1.1-2'}}, Likes: {{product.likes}}</p>
+        <p>RAW Data: {{product | json}}</p>
         <button class="btn btn-primary">
             <span class="glyphicon glyphicon-thumbs-up"></span>
         </button>
