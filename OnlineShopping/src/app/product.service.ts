@@ -1,5 +1,9 @@
 import { Product } from'./product.model';
+import { Injectable } from '@angular/core';
 
+@Injectable({
+    providedIn: 'root'
+})
 export class ProductService{
     public products:Product[]=[new Product("Watch",1200,1,4,4,"https://images-na.ssl-images-amazon.com/images/I/71gdBQP%2BqGL._UL1500_.jpg"),
         new Product("Phone",23123,1,4.5,4,"https://www.boostmobile.com/content/dam/boostmobile/en/products/phones/samsung/galaxy-s10e/white/device-front.png.transform/pdpCarousel/image.jpg"),
@@ -8,5 +12,10 @@ export class ProductService{
 
     getAllProducts():Product[]{
         return this.products;
+    }
+
+    deleteProduct(title:string):void{
+        var index:number = this.products.findIndex( p => p.title == title);
+        this.products.splice(index,1);
     }
 }

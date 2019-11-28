@@ -6,7 +6,7 @@
         <img [ngStyle] = "product.quantity==0? {opacity:0.2} :'' " [src]="product.imageUrl" height="200px" width="200px" />
     </div>
     <div >
-        <h2>{{product.title | uppercase}}</h2>
+        <h2>{{product.title }}</h2>
        Is Free: <input type="checkbox" [(ngModel)]="isFree"/><br/>
        <p *ngIf="!isFree;else elseTemplate ">
             <b>Price: {{product.price|currency:'INR'}} </b>
@@ -17,9 +17,19 @@
         <p >Quantity: <span [ngStyle] = "product.quantity==0? {color:'red'}:'' "> {{product.quantity|qty:'nos'}}</span></p>
         <p>Rating: {{product.rating|number:'1.1-2'}}, Likes: {{product.likes}}</p>
         <!-- <p>RAW Data: {{product | json}}</p> -->
-        <button class="btn btn-primary">
-            <span class="glyphicon glyphicon-thumbs-up"></span>
-        </button>
+        <div class="row">
+            <div class ="col-md-6 float-left">
+                    <button class="btn btn-primary ">
+                            <span class="glyphicon glyphicon-thumbs-up"></span>
+                    </button>
+            </div>
+            <div class="col-md-6 float-right">
+                <button class="btn btn-danger  "  (click)="delete()">
+                    <span class="glyphicon  glyphicon-trash"></span>
+                </button>
+            </div>
+        </div>
+       
     </div>
 </div>
 
