@@ -10,8 +10,14 @@ export class PostsService{
 
     }
 
+    //Using Observables
+    // getAllPosts(){
+    //     console.log("getAllPosts() Called")
+    //     return this.httpClientObj.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
+    // }
+
+    //Using Promises
     getAllPosts(){
-        console.log("getAllPosts() Called")
-        return this.httpClientObj.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
+        return this.httpClientObj.get<Post[]>("https://jsonplaceholder.typicode.com/posts").toPromise();
     }
 }
