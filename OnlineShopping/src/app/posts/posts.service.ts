@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Post } from './posts.model';
 
 @Injectable()
 export class PostsService{
@@ -9,8 +11,7 @@ export class PostsService{
     }
 
     getAllPosts(){
-        this.httpClientObj.get('https://jsonplaceholder.typicode.com/posts').subscribe( (response) => {
-            console.log(response);
-        });
+        console.log("getAllPosts() Called")
+        return this.httpClientObj.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
     }
 }
