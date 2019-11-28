@@ -5,7 +5,7 @@ import { CompanyService } from './company.service';
   selector: 'app-company',
   templateUrl: './company.component.html',
   styleUrls: ['./company.component.css'],
-  providers:[CompanyService]
+  providers:[]
 })
 export class CompanyComponent implements OnInit {
   public listOfCompanies:string[]

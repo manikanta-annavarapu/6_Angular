@@ -8,6 +8,8 @@ import {ProductComponent} from './product.component';
 import { QuantityPipe } from './quantity.pipe';
 import { CompanyComponent } from './company/company.component';
 
+import { CompanyService} from './company/company.service';
+
 
 
 @NgModule({
@@ -17,7 +19,7 @@ import { CompanyComponent } from './company/company.component';
   imports: [
     BrowserModule,FormsModule
   ],
-  providers: [],
+  providers: [CompanyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
