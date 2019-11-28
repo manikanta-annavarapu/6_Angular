@@ -11,12 +11,13 @@ import { CompanyComponent } from './company/company.component';
 
 import { CompanyService} from './company/company.service';
 import { PostsComponent } from './posts/posts.component';
+import { TodosComponent } from './todos/todos.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent, ShoppingCartComponent, ProductComponent,QuantityPipe, CompanyComponent, PostsComponent
+    AppComponent, ShoppingCartComponent, ProductComponent,QuantityPipe, CompanyComponent, PostsComponent, TodosComponent
   ],
   imports: [
     BrowserModule,FormsModule,HttpClientModule

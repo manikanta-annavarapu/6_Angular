@@ -16,11 +16,11 @@ export class PostsComponent implements OnInit {
   constructor(public postsService: PostsService) { 
     console.log("calling getAllPosts()");
     var o = this.postsService.getAllPosts();
-      o.subscribe( (response:Post[]) => {
-            console.log("Response Received");
-            console.log(response);
-            this.allPosts = response;
-        });
+    o.subscribe( (response:Post[]) => {
+          console.log("Response Received");
+          console.log(response);
+          this.allPosts = response;
+    });
 
     console.log("Some more code")
   }
