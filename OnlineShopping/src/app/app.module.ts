@@ -6,12 +6,13 @@ import { AppComponent } from './app.component';
 import {ShoppingCartComponent} from './shoppingCart.component';
 import {ProductComponent} from './product.component';
 import { QuantityPipe } from './quantity.pipe';
+import { CompanyComponent } from './company/company.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent, ShoppingCartComponent, ProductComponent,QuantityPipe
+    AppComponent, ShoppingCartComponent, ProductComponent,QuantityPipe, CompanyComponent
   ],
   imports: [
     BrowserModule,FormsModule

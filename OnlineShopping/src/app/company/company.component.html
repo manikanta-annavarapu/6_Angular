@@ -1,0 +1,12 @@
+<p>company works!</p>
+<div>
+    <p>
+        Company Name: <input type="text" [(ngModel)]="companyName" />
+        <button class ="btn" (click) = "addCompany()"> Add </button>
+    </p>
+</div>
+<ul>
+    <div  *ngFor= "let company of listOfCompanies">
+            <li>{{company}}</li>
+    </div>
+</ul>
