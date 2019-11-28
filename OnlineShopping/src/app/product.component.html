@@ -1,10 +1,9 @@
 
 
 <div  [ngClass]="{'ProductStyle':true,'Highlighted':isHighlighted}">
-    Add to Cart:<input type="checkbox" [(ngModel)]="isHighlighted"/>
+    Add to Cart:<input type="checkbox" [(ngModel)]="isHighlighted" [disabled]="!product.quantity"/>
     <div >
         <img [ngStyle] = "product.quantity==0? {opacity:0.2} :'' " [src]="product.imageUrl" height="200px" width="200px" />
-
     </div>
     <div >
         <h2>{{product.title | uppercase}}</h2>
@@ -15,7 +14,7 @@
         <ng-template #elseTemplate> <!--ELSE SHOULD BE A NG-TEMPLATE-->
             <b>This is free</b>
         </ng-template>
-        <p >Quantity:{{product.quantity|qty:'nos'}}</p>
+        <p >Quantity: <span [ngStyle] = "product.quantity==0? {color:'red'}:'' "> {{product.quantity|qty:'nos'}}</span></p>
         <p>Rating: {{product.rating|number:'1.1-2'}}, Likes: {{product.likes}}</p>
         <!-- <p>RAW Data: {{product | json}}</p> -->
         <button class="btn btn-primary">
