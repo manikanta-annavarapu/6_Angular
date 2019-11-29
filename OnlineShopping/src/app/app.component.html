@@ -6,7 +6,17 @@
 
 <!-- <app-company></app-company>
 <app-company></app-company> -->
-<a href="/">Home</a> | 
-<a href="/posts">Posts</a> | 
-<a href="/company">Company</a>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Online Shopping</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/posts">Posts</a></li>
+        <li><a routerLink="/company">Company</a></li>
+      </ul>
+    </div>
+  </nav>
 <router-outlet></router-outlet>
