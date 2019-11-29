@@ -15,18 +15,20 @@ import { TodosComponent } from './todos/todos.component';
 import { NewproductComponent } from './newproduct/newproduct.component';
 import { ProductService } from './product.service';
 
-import {Routes, RouterModule} from '@angular/router'
+import {Routes, RouterModule} from '@angular/router';
+import { PostdetailsComponent } from './postdetails/postdetails.component'
 
 const routes: Routes= [
     {path:"",component:ShoppingCartComponent},
     {path:"posts",component:PostsComponent},
     {path:"company", component:CompanyComponent},
+    {path:"posts/details/:id", component:PostdetailsComponent},
     {path:"**",redirectTo:"/"}
 ];
 
 @NgModule({
   declarations: [
-    AppComponent, ShoppingCartComponent, ProductComponent,QuantityPipe, CompanyComponent, PostsComponent, TodosComponent, NewproductComponent
+    AppComponent, ShoppingCartComponent, ProductComponent,QuantityPipe, CompanyComponent, PostsComponent, TodosComponent, NewproductComponent, PostdetailsComponent
   ],
   imports: [
     BrowserModule,FormsModule,HttpClientModule,
