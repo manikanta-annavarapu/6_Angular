@@ -1,13 +1,19 @@
 <h3> New Product</h3>
 
-<form action="">
-    Title:  <input type="text" name="pTitle"  [(ngModel)] = "newProduct.title" class="form-control">
+<form ngNativeValidate #f="ngForm" (ngSubmit)="addProduct()">
+    Title:  <input #produtTitle="ngModel" required type="text" name="pTitle"  [(ngModel)] = "newProduct.title" class="form-control">
+    <p class="error" *ngIf="produtTitle.invalid">
+        Title is required
+    </p>
     Quantity: <input type="text" name="pQuantity" [(ngModel)]="newProduct.quantity" class="form-control">
-    Price: <input type="text" name="pPrice" [(ngModel)]="newProduct.price" class="form-control">
+    Price: <input required  #produtPrice="ngModel" required [min] = "100" [max]= "100000" type="number" name="pPrice" [(ngModel)]="newProduct.price" class="form-control">
+    <p class="error" *ngIf="produtPrice.invalid">
+        Priceitle is required
+    </p>
     ImageUrl: <input type="text" name="pImageUrl" [(ngModel)] ="newProduct.imageUrl" class="form-control">
-    Likes: <input type="text" name="pLikes" [(ngModel)] ="newProduct.likes" class="form-control">
-    Rating: <input type="text" name="pRating" [(ngModel)]="newProduct.rating" class="form-control">
-    <button class="btn btn-success" (click) = "addProduct()">
+    Likes: <input type="number" name="pLikes" [(ngModel)] ="newProduct.likes" class="form-control">
+    Rating: <input type="number" name="pRating" [(ngModel)]="newProduct.rating" class="form-control">
+    <button class="btn btn-success"[disabled]="f.invalid">
         ADD<span class="glyphicon  glyphicon-plus-sign"></span>
     </button>
 </form>
