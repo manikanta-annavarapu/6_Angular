@@ -1,0 +1,13 @@
+<h3> New Product</h3>
+
+<form action="">
+    Title:  <input type="text" name="pTitle"  [(ngModel)] = "newProduct.title" class="form-control">
+    Quantity: <input type="text" name="pQuantity" [(ngModel)]="newProduct.quantity" class="form-control">
+    Price: <input type="text" name="pPrice" [(ngModel)]="newProduct.price" class="form-control">
+    ImageUrl: <input type="text" name="pImageUrl" [(ngModel)] ="newProduct.imageUrl" class="form-control">
+    Likes: <input type="text" name="pLikes" [(ngModel)] ="newProduct.likes" class="form-control">
+    Rating: <input type="text" name="pRating" [(ngModel)]="newProduct.rating" class="form-control">
+    <button class="btn btn-success" (click) = "addProduct()">
+        ADD<span class="glyphicon  glyphicon-plus-sign"></span>
+    </button>
+</form>

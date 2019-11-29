@@ -18,4 +18,8 @@ export class ProductService{
         var index:number = this.products.findIndex( p => p.title == title);
         this.products.splice(index,1);
     }
+
+    addProduct(product:Product ){
+        this.products.push(product);
+    }
 }

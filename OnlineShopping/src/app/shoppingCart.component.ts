@@ -4,8 +4,7 @@ import {ProductService} from './product.service';
 
 @Component({
     selector:'shopping-cart',
-    templateUrl:'./shoppingCart.component.html',
-    providers: [ProductService]
+    templateUrl:'./shoppingCart.component.html'
 })
 export class ShoppingCartComponent{
     heading:string="Online Shopping";

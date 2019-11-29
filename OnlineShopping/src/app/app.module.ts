@@ -12,17 +12,19 @@ import { CompanyComponent } from './company/company.component';
 import { CompanyService} from './company/company.service';
 import { PostsComponent } from './posts/posts.component';
 import { TodosComponent } from './todos/todos.component';
+import { NewproductComponent } from './newproduct/newproduct.component';
+import { ProductService } from './product.service';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent, ShoppingCartComponent, ProductComponent,QuantityPipe, CompanyComponent, PostsComponent, TodosComponent
+    AppComponent, ShoppingCartComponent, ProductComponent,QuantityPipe, CompanyComponent, PostsComponent, TodosComponent, NewproductComponent
   ],
   imports: [
     BrowserModule,FormsModule,HttpClientModule
   ],
-  providers: [CompanyService],
+  providers: [CompanyService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
