@@ -15,14 +15,22 @@ import { TodosComponent } from './todos/todos.component';
 import { NewproductComponent } from './newproduct/newproduct.component';
 import { ProductService } from './product.service';
 
+import {Routes, RouterModule} from '@angular/router'
 
+const routes: Routes= [
+    {path:"",component:ShoppingCartComponent},
+    {path:"posts",component:PostsComponent},
+    {path:"company", component:CompanyComponent},
+    {path:"**",redirectTo:"/"}
+];
 
 @NgModule({
   declarations: [
     AppComponent, ShoppingCartComponent, ProductComponent,QuantityPipe, CompanyComponent, PostsComponent, TodosComponent, NewproductComponent
   ],
   imports: [
-    BrowserModule,FormsModule,HttpClientModule
+    BrowserModule,FormsModule,HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [CompanyService, ProductService],
   bootstrap: [AppComponent]
