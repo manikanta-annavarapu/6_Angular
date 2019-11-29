@@ -17,6 +17,7 @@ import { ProductService } from './product.service';
 
 import {Routes, RouterModule} from '@angular/router';
 import { PostdetailsComponent } from './postdetails/postdetails.component'
+import { PostsService } from './posts/posts.service';
 
 const routes: Routes= [
     {path:"",component:ShoppingCartComponent},
@@ -34,7 +35,7 @@ const routes: Routes= [
     BrowserModule,FormsModule,HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [CompanyService, ProductService],
+  providers: [CompanyService, ProductService, PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

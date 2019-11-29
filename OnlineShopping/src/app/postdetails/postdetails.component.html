@@ -1,1 +1,8 @@
 <p>postdetails works!</p>
+
+
+<div *ngIf="postData.title">
+    <h3> {{postData.title}}</h3>
+    <p> Post ID: {{postData.id}} | User ID: {{postData.userId}}</p>
+    <p> {{postData.body}}</p>
+</div>
