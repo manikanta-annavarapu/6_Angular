@@ -21,6 +21,7 @@ import { PostsService } from './posts/posts.service';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { Route } from '@angular/compiler/src/core';
+import { AuthGuard } from './auth.guard';
 
 
 // const routes: Routes= [
@@ -40,7 +41,7 @@ const routes :Routes =[
     {path:'posts/details/:id',component:PostdetailsComponent},
     {path:'newproduct', component:NewproductComponent},
     {path:'company', component: CompanyComponent}
-  ]},
+  ], canActivate:[AuthGuard]},
   {path:'**', redirectTo:'/'}
 ];
 
