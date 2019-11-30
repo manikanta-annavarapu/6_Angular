@@ -1,5 +1,5 @@
 <p>posts works!</p>
 
 <div *ngFor="let post of allPosts">   
-    <p> <b> Title:</b> <a [routerLink]="['/posts/details',post.id]"> {{post.title}} </a></p> 
+    <p postStyle> <b> Title:</b> <a [routerLink]="['/posts/details',post.id]"> {{post.title}} </a></p> 
 </div>

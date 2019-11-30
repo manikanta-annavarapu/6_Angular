@@ -22,6 +22,9 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { Route } from '@angular/compiler/src/core';
 import { AuthGuard } from './auth.guard';
+import { MessageComponent } from './message/message.component';
+import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
+import { PostsDirective } from './posts.directive';
 
 
 // const routes: Routes= [
@@ -41,14 +44,16 @@ const routes :Routes =[
     {path:'posts/details/:id',component:PostdetailsComponent},
     {path:'newproduct', component:NewproductComponent},
     {path:'company', component: CompanyComponent}
-  ], canActivate:[AuthGuard]},
+    ]//, canActivate:[AuthGuard]
+  },
+  {path:'message', component:MessageComponent},
   {path:'**', redirectTo:'/'}
 ];
 
 @NgModule({
   declarations: [
     AppComponent, ShoppingCartComponent, ProductComponent,QuantityPipe, 
-    CompanyComponent, PostsComponent, TodosComponent, NewproductComponent, PostdetailsComponent, LoginComponent, DashboardComponent
+    CompanyComponent, PostsComponent, TodosComponent, NewproductComponent, PostdetailsComponent, LoginComponent, DashboardComponent, MessageComponent, LifecyclehooksComponent, PostsDirective
   ],
   imports: [
     BrowserModule,FormsModule,HttpClientModule,

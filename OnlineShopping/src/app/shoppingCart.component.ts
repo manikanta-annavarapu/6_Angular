@@ -10,6 +10,7 @@ export class ShoppingCartComponent{
     heading:string="Online Shopping";
     products: Product[];
     cartItems: Product[] = [];
+    searchString: string
     
     constructor(public productService: ProductService){
         this.cartItems = [];

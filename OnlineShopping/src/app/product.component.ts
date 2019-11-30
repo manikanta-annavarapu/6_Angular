@@ -10,6 +10,7 @@ import { ProductService } from './product.service';
 export class ProductComponent{
     @Input() product:Product ;
     isHighlighted:boolean ;
+    isFree:boolean;
 
     constructor(public productService:ProductService){
         this.isHighlighted = false;
