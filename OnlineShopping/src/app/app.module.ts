@@ -24,6 +24,7 @@ const routes: Routes= [
     {path:"posts",component:PostsComponent},
     {path:"company", component:CompanyComponent},
     {path:"posts/details/:id", component:PostdetailsComponent},
+    {path:"newproduct", component:NewproductComponent},
     {path:"**",redirectTo:"/"}
 ];
 

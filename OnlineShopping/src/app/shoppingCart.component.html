@@ -1,7 +1,7 @@
 <div class="jumbotron ">
     <h1> {{heading}} </h1>
 </div>
-<app-newproduct></app-newproduct>
+
 <!-- <input type="button"
 value="change heading!"
 class="btn btn-default"
@@ -17,6 +17,7 @@ class="btn btn-default"
     <li *ngSwitchCase=" 'Infosys' ">Infosys</li>
     <li *ngSwitchDefault>No company match</li>
 </ul> -->
+<p>Cart Items: {{ cartItems.length }}</p>
 Search : <input type="text" [(ngModel)]="searchString"/>
 
 

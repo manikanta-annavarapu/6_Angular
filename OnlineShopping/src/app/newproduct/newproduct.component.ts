@@ -17,10 +17,11 @@ export class NewproductComponent implements OnInit {
   ngOnInit() {
   }
 
-  addProduct(){
+  addProduct(formData){
     console.log(this.newProduct);
     this.productService.addProduct(this.newProduct);
     this.newProduct = new Product();
+    formData.reset();
   }
 
 }

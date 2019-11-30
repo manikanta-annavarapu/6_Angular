@@ -9,9 +9,12 @@ import {ProductService} from './product.service';
 export class ShoppingCartComponent{
     heading:string="Online Shopping";
     products: Product[];
+    cartItems: Product[] = [];
     
     constructor(public productService: ProductService){
+        this.cartItems = [];
         this.products = productService.getAllProducts();
+        this.cartItems = productService.cartItem;
     }
 
     ChangeHeading(){

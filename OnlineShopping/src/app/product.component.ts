@@ -9,12 +9,23 @@ import { ProductService } from './product.service';
 })
 export class ProductComponent{
     @Input() product:Product ;
-    isHighlighted:boolean=false;
+    isHighlighted:boolean ;
 
     constructor(public productService:ProductService){
-
+        this.isHighlighted = false;
     }
 
+    addToCart(){
+        console.log("isHighlighted = ",this.isHighlighted)
+        if(this.isHighlighted){
+            this.productService.deleteInCart(this.product);
+            console.log("hello");
+        }else{
+            this.productService.addToCart(this.product);
+            console.log("bye");
+        }
+        
+    }
    delete(){
     this.productService.deleteProduct(this.product.title);
    }

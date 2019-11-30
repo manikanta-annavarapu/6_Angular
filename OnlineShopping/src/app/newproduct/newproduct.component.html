@@ -1,13 +1,13 @@
 <h3> New Product</h3>
 
-<form ngNativeValidate #f="ngForm" (ngSubmit)="addProduct()">
+<form ngNativeValidate #f="ngForm" (ngSubmit)="addProduct(f)">
     Title:  <input #produtTitle="ngModel" required type="text" name="pTitle"  [(ngModel)] = "newProduct.title" class="form-control">
-    <p class="error" *ngIf="produtTitle.invalid">
+    <p class="error" *ngIf="produtTitle.invalid && produtTitle.dirty">
         Title is required
     </p>
     Quantity: <input type="text" name="pQuantity" [(ngModel)]="newProduct.quantity" class="form-control">
     Price: <input required  #produtPrice="ngModel" required [min] = "100" [max]= "100000" type="number" name="pPrice" [(ngModel)]="newProduct.price" class="form-control">
-    <p class="error" *ngIf="produtPrice.invalid">
+    <p class="error" *ngIf="produtPrice.invalid && produtTitle.dirty">
         Priceitle is required
     </p>
     ImageUrl: <input type="text" name="pImageUrl" [(ngModel)] ="newProduct.imageUrl" class="form-control">
